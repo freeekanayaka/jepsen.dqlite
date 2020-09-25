@@ -32,7 +32,7 @@
     (c/su
      (c/exec "mkdir" "-p" dir)
      (c/exec "chmod" "777" dir)
-     (c/upload "/home/admin/jepsen.dqlite/resources/app.go" source)
+     (c/upload "resources/app.go" source)
      (c/exec "go" "get" "-tags" "libsqlite3" "github.com/canonical/go-dqlite/app")
      (c/exec "go" "build" "-tags" "libsqlite3" "-o" binary source))))
 
